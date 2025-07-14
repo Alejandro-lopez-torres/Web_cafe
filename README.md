@@ -1,2 +1,2 @@
-# Web_cafe
-Aplicación web de un café 
+# proyecto_cafe
+aplicación web de cafetería 
