@@ -1,0 +1,69 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f4; /* Color de fondo claro */
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #4b2c20; /* Color del título */
+    margin-top: 40px; /* Más espacio arriba */
+    margin-bottom: 0;
+}
+
+form {
+    max-width: 400px; /* Ancho máximo del formulario */
+    width: 100%;
+    margin: 30px auto 0 auto; /* Centrado y espacio arriba */
+    padding: 20px; /* Espaciado interno */
+    background-color: white; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px; /* Espacio entre etiqueta y campo */
+    color: #4b2c20; /* Color de las etiquetas */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espacio entre campos */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #4b2c20; /* Color del borde al enfocar */
+    outline: none; /* Sin contorno por defecto */
+}
+
+button {
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 10px; /* Espaciado interno */
+    background-color: #000000; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border: 3px solid #b47043b6; /* Bordes cuadrados */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave */
+    box-sizing: border-box; /* Incluye padding en el tamaño total */
+}
+
+button:hover {
+    background-color: #333333a1; /* Color al pasar el mouse */
+}

@@ -1,0 +1,87 @@
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8; /* Color de fondo suave */
+    color: #333; /* Color del texto */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navegación */
+nav.categorias {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+nav.categorias button {
+    background-color: #fff;
+    color: #00704a;
+    border: 1px solid #b47043b6;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav.categorias button:hover {
+    background: linear-gradient(to right,#dbbb90,#b47043b6,#dbbb90);
+    color: #fff;
+}
+
+/* Sección de productos */
+.menu {
+    text-align: center;
+    padding: 20px;
+}
+
+.productos {
+    margin: 20px 0;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.producto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.producto h3 {
+    color: #00704a;
+    margin: 10px 0;
+}
+
+/* Botones de agregar al carrito */
+button[type="submit"] {
+    background-color: #00704a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #005b3d;
+}
+

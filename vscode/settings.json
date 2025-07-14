@@ -1,0 +1,9 @@
+{
+  "terminal.integrated.profiles.windows": {
+    "FlaskEntorno": {
+      "path": "cmd.exe",
+      "args": ["/k", ".vscode\\activar_entorno.bat"]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "FlaskEntorno"
+}

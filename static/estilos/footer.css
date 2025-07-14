@@ -1,0 +1,40 @@
+/* Pie de página */
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Sticky footer */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    nav.categorias {
+        flex-direction: column;
+    }
+
+    nav.categorias button {
+        margin: 10px 0;
+    }
+}

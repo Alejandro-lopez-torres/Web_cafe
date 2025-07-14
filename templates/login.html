@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/LaRueda.png" type="image/x-icon"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos/login.css') }}">
+    <title>Iniciar Sesión - La Rueda Viteña</title>
+</head>
+<body>
+    {% include 'header.html' %}
+    <div class="main-login-container">
+    <h2>Iniciar Sesión</h2>
+    {% if error %}
+        <div class="error">{{ error }}</div>
+    {% endif %}
+    <form method="POST" action="">
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" name="contrasena" required>
+
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+   </div>
+    {% include 'footer.html' %}
+</body>
+</html>

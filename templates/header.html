@@ -1,0 +1,18 @@
+<header>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos/header.css') }}">
+    <a href="{{ url_for('index') }}">
+        <img src="{{ url_for('static', filename='imagenes/fondoR.png') }}" alt="Logo de la página">
+    </a>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('Menu') }}">Menú</a></li>
+            <li><a href="{{ url_for('Tienda') }}">Tienda</a></li>
+            <li><a href="{{ url_for('Contacto') }}">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="buttons">
+        <a href="{{ url_for('login') }}" class="btn">Iniciar Sesión</a>
+        <a href="{{ url_for('registro') }}" class="btn">Regístrate</a>
+    </div>
+</header>
