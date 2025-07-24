@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
+from controllers.usuario_controller import login_controller
 
 
 
@@ -37,20 +38,7 @@ def Contacto():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    error = None
-    if request.method == 'POST':
-        email = request.form['email']
-        contrasena = request.form['contrasena']
-        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursor.execute('SELECT * FROM usuarios WHERE email = %s', (email,))
-        usuario = cursor.fetchone()
-        if usuario and usuario['contrasena'] == contrasena:  # Cambia esto si usas hash
-            session['usuario_id'] = usuario['id']
-            session['nombre'] = usuario['nombre']
-            return redirect(url_for('index'))
-        else:
-            error = 'Email o contraseña incorrectos.'
-    return render_template('login.html', error=error)
+    return login_controller(mysql, request)
 
 @app.route('/registro')
 def registro():
