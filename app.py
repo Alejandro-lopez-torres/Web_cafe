@@ -40,7 +40,7 @@ def Contacto():
 def login():
     return login_controller(mysql, request)
 
-@app.route('/registro')
+@app.route('/registro', methods=['GET', 'POST'])
 def registro():
     return render_template('registro.html')
 
