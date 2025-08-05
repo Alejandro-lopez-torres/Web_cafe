@@ -1,5 +1,5 @@
-from flask import session, redirect, url_for, render_template
-from models.usuario_model import obtener_usuario_por_email
+from flask import request, session, redirect, url_for, render_template 
+from models.usuario_model import obtener_usuario_por_email ,registrar_usuario
 from models.usuario_model import registrar_usuario
 
 
@@ -18,7 +18,7 @@ def login_controller(mysql, request):
     return render_template('login.html', error=error) 
 
  
- 
+
 def registro_controller(mysql, request):
     if request.method == 'POST':
         nombre = request.form['nombre']

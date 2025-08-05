@@ -15,7 +15,7 @@
     {% elif error %}
         <p style="color: red; text-align: center;">{{ error }}</p>
     {% endif %}
-    <form method="POST" action="">
+    <form method="POST" action="{{ url_for('registro') }}">
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" required><br>
         <label for="email">Email:</label>

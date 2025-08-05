@@ -42,7 +42,10 @@ def login():
 
 @app.route('/registro', methods=['GET', 'POST'])
 def registro():
+    if request.method == 'POST':
+        return registro_controller(mysql, request)
     return render_template('registro.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
