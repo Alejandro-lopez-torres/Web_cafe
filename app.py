@@ -1,11 +1,13 @@
-from flask import Flask, render_template, request, redirect, url_for, session, flash
+from flask import Flask, render_template, request, redirect, url_for, session, flash, request, jsonify
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
-from controllers.usuario_controller import login_controller
-
+import mysql.connector
+import bcrypt
+from controllers.usuario_controller import login_controller, registro_controller
 
 
 app = Flask(__name__)
+app.secret_key = '22(Torres)12)'
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = '22Torres12'
