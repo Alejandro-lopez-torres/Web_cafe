@@ -7,7 +7,7 @@ from controllers.usuario_controller import login_controller, registro_controller
 
 
 app = Flask(__name__)
-app.secret_key = '22(Torres)12)'
+app.secret_key = ''
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = '22Torres12'
@@ -47,6 +47,24 @@ def registro():
     if request.method == 'POST':
         return registro_controller(mysql, request)
     return render_template('registro.html')
+
+"htmls qwue faltan agregar y confirar en el proyecto"
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('index'))
+
+@app.route('/metodos_pago')
+def metodos_pago():
+    return render_template('metodos_pago.html')
+
+@app.route('/historial')
+def historial():
+    return render_template('historial.html')
+
+@app.route('/info_personal')
+def info_personal():
+    return render_template('info_personal.html')
 
 
 if __name__ == '__main__':

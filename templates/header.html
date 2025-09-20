@@ -9,10 +9,28 @@
             <li><a href="{{ url_for('Menu') }}">Menú</a></li>
             <li><a href="{{ url_for('Tienda') }}">Tienda</a></li>
             <li><a href="{{ url_for('Contacto') }}">Contacto</a></li>
+
+            {% if session.get('nombre') %}
+            <li><a href="/Menu"><img src="{{ url_for('static', filename='imagenes/carrito.png') }}" alt="Carrito"></a>
+            </li>
+            <li style="text-align:center;">
+                {{ session['nombre'] }}
+                <div class="dropdown" style="display:inline-block;">
+                    <button class="dropbtn">▼</button>
+                    <div class="dropdown-content">
+                        <a href="/metodos_pago">Métodos de Pago</a>
+                        <a href="/historial">Historial</a>
+                        <a href="/info_personal">Información Personal</a>
+                        <a href="/logout">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </li>
+            {% else %}
+            <div class="buttons">
+                <a href="{{ url_for('login') }}" class="btn">Iniciar Sesión</a>
+                <a href="{{ url_for('registro') }}" class="btn">Regístrate</a>
+            </div>
+            {% endif %}
         </ul>
     </nav>
-    <div class="buttons">
-        <a href="{{ url_for('login') }}" class="btn">Iniciar Sesión</a>
-        <a href="{{ url_for('registro') }}" class="btn">Regístrate</a>
-    </div>
 </header>
